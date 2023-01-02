@@ -4,7 +4,7 @@ class parkingGarage():
     def __init__(self):
         self.tickets = [100]
         self.parkingSpace = [100]
-        self.currentTicket = {}
+        self.currentTicket = {'paid':False}
     
     def takeTicket(self):
         for i in range(len(self.tickets)):
