@@ -12,7 +12,12 @@ class parkingGarage():
         for i in range(len(self.parkingSpace)):
             self.parkingSpace[i] = self.parkingSpace[i] - 1
 
-    # def payForParking(self):
+    def payForParking(self):
+        self.payment = input('Please place your payment!')
+        print('Thank you for paying your ticket, you have 15mins to leave!')
+        self.currentTicket2 = {'paid':True}
+        self.currentTicket.update(self.currentTicket2)
+       
 
     # def leaveGarage(self):
 
@@ -26,4 +31,6 @@ print(parkingGarage.parkingSpace)
 parkingGarage.takeTicket()
 print(parkingGarage.tickets)
 print(parkingGarage.parkingSpace)
+print(parkingGarage.currentTicket)
+parkingGarage.payForParking()
 
